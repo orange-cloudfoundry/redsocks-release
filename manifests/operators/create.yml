@@ -1,0 +1,7 @@
+---
+- type: replace
+  path: /releases/name=redsocks
+  value:
+    name: redsocks
+    version: create
+    url: file://.
