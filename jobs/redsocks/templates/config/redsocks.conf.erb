@@ -8,7 +8,7 @@ base {
 }
 redsocks {
  local_ip = 127.0.0.1;
- local_port = 12346;
+ local_port = <%= p('port') %>;
  ip = <%= p('remote-proxy.ip') %>;
  port = <%= p('remote-proxy.ip') %>;
  type = http-connect;

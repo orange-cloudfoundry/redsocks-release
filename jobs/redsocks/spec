@@ -14,3 +14,7 @@ properties:
   remote-proxy.port:
     description: relay traffic to this host
     default: 3128
+  port:
+    description: Bind redsocks process to this port
+    default: 12346
+    
