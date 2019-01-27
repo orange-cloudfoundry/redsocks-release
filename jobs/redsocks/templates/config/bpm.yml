@@ -1,8 +1,8 @@
 ---
 processes:
 - name: redsocks
-  executable: /var/vcap/packages/redsocks/bin/redsocks
-  args: []
+  executable: /usr/sbin/redsocks 
+  args: [-c /var/vcap/jobs/redsocks/config/redcocks.conf]
   ephemeral_disk: true
   persistent_disk: false
   env:
