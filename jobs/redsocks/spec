@@ -8,9 +8,9 @@ consumes: []
 provides:
 - name: redsocks
   type: redsocks
-  properties:
-  - port
 properties:
-  port:
-    description: Bind to this port
-    default: 8080
+  remote-proxy.ip:
+    description: relay traffic to this host
+  remote-proxy.port:
+    description: relay traffic to this host
+    default: 3128

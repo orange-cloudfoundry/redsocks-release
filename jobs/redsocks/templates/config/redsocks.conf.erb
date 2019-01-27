@@ -1,15 +1,15 @@
 base {
-             log_debug = off;
-             log_info = on;
-             daemon = on;
-             user = redsocks;
-             group = redsocks;
-             redirector = iptables;
-            }
-            redsocks {
-             local_ip = 127.0.0.1;
-             local_port = 12346;
-             ip = ((proxy-ip));
-             port = ((proxy-port));
-             type = http-connect;
-            }
+ log_debug = off;
+ log_info = on;
+ daemon = on;
+ user = redsocks;
+ group = redsocks;
+ redirector = iptables;
+}
+redsocks {
+ local_ip = 127.0.0.1;
+ local_port = 12346;
+ ip = <%= p('remote-proxy.ip') %>;
+ port = <%= p('remote-proxy.ip') %>;
+ type = http-connect;
+}
