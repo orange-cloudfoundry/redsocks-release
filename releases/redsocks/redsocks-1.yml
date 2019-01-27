@@ -1,0 +1,23 @@
+name: redsocks
+version: "1"
+commit_hash: 64c92f3
+uncommitted_changes: false
+jobs:
+- name: redsocks
+  version: e6ac8b7358f61be4e018caffaca0272d0883f036
+  fingerprint: e6ac8b7358f61be4e018caffaca0272d0883f036
+  sha1: 1fb788c37fa9e741b03a30c62723649451298fee
+- name: redsocks-pkg-install
+  version: 74a66f34ae91951fa2f092a7d19ed523dfd1c371
+  fingerprint: 74a66f34ae91951fa2f092a7d19ed523dfd1c371
+  sha1: bb08ce45d6ea1f857471a0917eb392f481073e2b
+packages:
+- name: redsocks
+  version: 80d992defbbe83b2cb050f00d89f2d0feeee1316
+  fingerprint: 80d992defbbe83b2cb050f00d89f2d0feeee1316
+  sha1: 7ee4ff549ed8ad9464f67c4331f7753e1de878ab
+  dependencies: []
+license:
+  version: d04faa29597edf674d8a8d140659054fb45108bf
+  fingerprint: d04faa29597edf674d8a8d140659054fb45108bf
+  sha1: f1b7a447b0ebe1dbe23ee2752a7e702d6ea2f076
