@@ -3,7 +3,7 @@ name: redsocks
 packages: []
 templates:
   config/bpm.yml: config/bpm.yml
-  redsocks.conf.erb: config/redsocks.conf
+  config/redsocks.conf.erb: config/redsocks.conf
 consumes: []
 provides:
 - name: redsocks
