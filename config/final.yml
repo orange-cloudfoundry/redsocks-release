@@ -1,7 +1,6 @@
 ---
 blobstore:
-  provider: swift
+  provider: s3
   options:
-    container_name: redsocks-boshrelease
-    swift_provider: openstack
-final_name: redsocks
+    bucket_name: orange-redsocks-boshrelease
+final_name: redsocks 
