@@ -1,0 +1,5 @@
+check process redsocks
+  with pidfile /var/vcap/sys/run/bpm/redsocks/redsocks.pid
+  start program "/var/vcap/jobs/bpm/bin/bpm start redsocks"
+  stop program "/var/vcap/jobs/bpm/bin/bpm stop redsocks"
+  group vcap

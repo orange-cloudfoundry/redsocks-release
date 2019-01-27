@@ -2,5 +2,15 @@
 name: redsocks
 packages: []
 templates:
-  ignoreme: ignoreme
-properties: {}
+  config/bpm.yml: config/bpm.yml
+  redsocks.conf.erb: config/redsocks.conf
+consumes: []
+provides:
+- name: redsocks
+  type: redsocks
+  properties:
+  - port
+properties:
+  port:
+    description: Bind to this port
+    default: 8080
