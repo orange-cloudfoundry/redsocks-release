@@ -9,15 +9,20 @@ addons:
 
 instance_groups:
 - name: redsocks
-  azs: [z1, z2, z3]
+  azs: [z1]
   instances: 1
   vm_type: default
   stemcell: default
-  networks: [{name: default}]
+  networks: [{name: net-bosh-2}]
   jobs:
+  - name: redsocks-pkg-install
+    release: redsocks
   - name: redsocks
     release: redsocks
-    properties: {}
+    properties:
+     remote-proxy:
+       ip: 192.168.116.130
+       port: 3128
 
 variables: []
 
@@ -38,6 +43,4 @@ releases:
   version: 0.12.3
   url: git+https://github.com/cloudfoundry-incubator/bpm-release
 - name: redsocks
-  version: create  # TODO: update after first final release
-  url: .           # TODO: update after first final release
-  # sha1:            TODO: update after first final release
+  version: latest  # TODO: update after first final release
