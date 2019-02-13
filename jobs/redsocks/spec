@@ -4,7 +4,15 @@ packages: []
 templates:
   config/bpm.yml: config/bpm.yml
   config/redsocks.conf.erb: config/redsocks.conf
-  post-deploy: bin/post-deploy
+  post-deploy.erb: bin/post-deploy
+  post-start.erb: bin/post-start
+  pre-start.erb: bin/pre-start
+  post-stop.erb: bin/post-stop
+  drain.erb: bin/drain
+
+
+
+
 consumes: []
 provides:
 - name: redsocks
