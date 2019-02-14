@@ -21,17 +21,6 @@ sudo iptables -t nat -A REDSOCKS -d 240.0.0.0/4 -j RETURN
 # Anything else should be redirected to port 12345
 sudo iptables -t nat -A REDSOCKS -p tcp -j REDIRECT --to-ports 12346
 
-#accept tcp inbound traffic, route to REDSOCKS chain
-#sudo iptables -t nat -A PREROUTING -p tcp -s 192.168.0.0/16 -j REDSOCKS
-#sudo iptables -t nat -A PREROUTING -i eth0 -p tcp -j REDSOCKS
-sudo iptables -t nat -A PREROUTING -p tcp --dport 443 -j REDSOCKS
-
-sudo iptables -A POSTROUTING -t nat -j MASQUERADE
-
-#to catch direct outbound traffic from redsocks vm
-sudo iptables -t nat -A OUTPUT -p tcp --dport 80 -j REDSOCKS
-sudo iptables -t nat -A OUTPUT -p tcp --dport 443 -j REDSOCKS
-
 
 EXITSTATUS=0
 
