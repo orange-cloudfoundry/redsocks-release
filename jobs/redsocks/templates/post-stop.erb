@@ -3,6 +3,8 @@
 set -u # report the usage of uninitialized variables
 
 sudo iptables -t nat -D PREROUTING -i eth0 -p tcp --dport 443 -j REDSOCKS
+sudo iptables -D POSTROUTING -t nat -j MASQUERADE
+
 sudo iptables -X REDSOCKS
 
 EXITSTATUS=0
