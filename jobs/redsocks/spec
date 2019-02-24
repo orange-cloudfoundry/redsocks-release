@@ -17,6 +17,8 @@ provides:
 - name: redsocks
   type: redsocks
 properties:
+  local-ip:
+    description: local listening ip for redsocks, default to 127.0.0.1.
   remote-proxy.ip:
     description: relay traffic to this host
   remote-proxy.port:

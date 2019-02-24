@@ -5,7 +5,11 @@ base {
  redirector = iptables;
 }
 redsocks {
+<% if_p('local-ip') do |ip| %>
+ local_ip = <%= p('local-ip') %>;
+<% else %>
  local_ip = 127.0.0.1;
+<% end %>
  local_port = <%= p('port') %>;
  ip = <%= p('remote-proxy.ip') %>;
  port = <%= p('remote-proxy.port') %>;
